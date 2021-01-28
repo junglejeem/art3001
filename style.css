@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+.heading-style {
+    text-shadow: 2px 2px #ff0000;
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+}
+
+a {
+    color: red;
+}
+
+.unique-class {
+    text-shadow: 2px 2px blue;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.red-text {
+    color: red;
+}
+
+.crazy-font {
+    font-style: italic;
+    text-decoration: overline;
+    font-weight: 900;
+}
+
+.upside-down {
+    transform: scale(1, -1);
+}

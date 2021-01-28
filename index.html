@@ -2,10 +2,14 @@
 <html>
 
 <head>
-    <title>Cool Workshop 1</title>
+    <title>Cool Workshops</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;0,900;1,700&display=swap');
+    </style>
 </head>
 
-<body>
+<body style="background-color: black; color: white;">
     <header>
         <h1>Hirad's Homepage</h1>
         <nav>
@@ -16,14 +20,55 @@
             <a href="projects/">Projects</a>
             <hr>
             <h3>Playground</h3>
-            <a href="playground/div.html">div</a>
+            <a href="playground/extra-tags.html">div</a>
         </nav>
+
+        <h1 class="unique-class">This is styled too</h1>
+        <h1>So is this</h1>
     </header>
 
     <hr>
 
-    <p>This is my first cool website that I can update in real-time</p>
+    <p class="unique-class red-text">Here I'm using the same class that I was using for my h1 but for a paragraph</p>
 
+    <p>Here I am using <b>bold</b>, <i>italic</i>, and <u>underscore</u> using the HTML tags.</p>
+
+    <p>Here I am using <span style="font-weight: bold;">bold</span>, <span style="font-style: italic;">italic</span>, and <span style="text-decoration: underline;">underscore</span> with CSS only.</p>
+
+
+    <h2>5 variations:</h2>
+
+    <p class="unique-class">This is my mystical verse</p>
+    <p class="red-text">This is my mystical verse</p>
+    <p class="crazy-font">This is my mystical verse</p>
+    <p class="heading-style">This is my mystical verse</p>
+    <p class="upside-down">This is my mystical verse</p>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Melon</li>
+    </ul>
+
+    <ol>
+        <li style="color: #ffff00; text-shadow: 0 0 5px yellow;">Banana</li>
+        <li style="color: chartreuse;">Apple</li>
+        <li style="color: coral; text-transform: uppercase;">Melon</li>
+        <ol>
+            <li>Watermelon</li>
+            <li>Honeymelon</li>
+            <li>Strangemelon</li>
+        </ol>
+        <li>Oranges</li>
+    </ol>
 
     <footer>A Mark Zuckerberg Production</footer>
 </body>
