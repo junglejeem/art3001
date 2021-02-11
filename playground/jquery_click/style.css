@@ -7,4 +7,5 @@
     background: blue;
     height: 500px;
     transition: all 1s ease-in-out;
+    border: 25px black solid;
 }

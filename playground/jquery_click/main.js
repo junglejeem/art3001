@@ -14,7 +14,10 @@ $(document).ready(function() {
     });
 
     $(".bottom").click(function() {
-        $(".top").fadeToggle(2000);
+        $(".top").fadeToggle(2000, function() {
+            console.log("Fading is completed")
+            $(".bottom").css("height", "1500px");
+        });
     });
 
 });
