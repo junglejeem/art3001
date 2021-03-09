@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ABEC49;
+    font-family: 'Walter Turncoat', cursive;
+}
+
+.logo {
+    fill: #ABEC18;
+    height: 80px;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #130e23;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.text {
+    position: relative;
+    text-align: center;
+    margin: 10px 40px;
+    max-width: 650px;
+    font-size: 26px;
+}
+
+.text span {
+    position: relative;
+    display: inline-block;
+}
+
+.author {
+    padding-left: 40%;
+    font-size: 22px;
+}

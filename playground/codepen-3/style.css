@@ -1,0 +1,633 @@
+@font-face {
+    font-family: "URWAgendaW01-Light";
+    src: url("//db.onlinewebfonts.com/t/20b3ea6b129a568ccc5cdc55adf6c2bc.eot");
+    src: url("//db.onlinewebfonts.com/t/20b3ea6b129a568ccc5cdc55adf6c2bc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/20b3ea6b129a568ccc5cdc55adf6c2bc.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/20b3ea6b129a568ccc5cdc55adf6c2bc.woff") format("woff"), url("//db.onlinewebfonts.com/t/20b3ea6b129a568ccc5cdc55adf6c2bc.ttf") format("truetype");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+    font-family: "URWAgendaW01-Light";
+    line-height: 1.2;
+    font-weight: 100;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100vw;
+}
+
+h1,
+h2,
+h4,
+p {
+    font-family: "Special Elite", cursive;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+main {
+    background-color: #3e5131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.stamp {
+    border-radius: 4px;
+    width: 300px;
+    height: 380px;
+    position: relative;
+    border-radius: 2px;
+    background-image: radial-gradient(73% 147%, #eadfdf 59%, #eadfdf 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: screen;
+}
+
+.stamp::after,
+.stamp::before {
+    content: "";
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, #3e5131 50%, transparent 50%), radial-gradient(circle, #3e5131 50%, transparent 50%);
+    background-size: 20px 20px;
+}
+
+.stamp::before {
+    height: 360px;
+    top: 10px;
+    background-repeat: repeat-y;
+    background-position: -4% 0%, 104.2% 0;
+}
+
+.stamp::after {
+    width: 280px;
+    height: 380px;
+    left: 10px;
+    background-repeat: repeat-x;
+    background-position: 0% -3%, 0% 103%;
+}
+
+h1 {
+    color: #af8a32;
+    font-size: 36px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+}
+
+h1 span {
+    position: relative;
+    align-self: flex-end;
+}
+
+h1:nth-of-type(2) {
+    font-size: 16px;
+    top: unset;
+    bottom: 24px;
+}
+
+.stamp-deets {
+    position: absolute;
+    right: 24px;
+    color: #af8a32;
+    top: 40px;
+}
+
+.date {
+    color: #af8a32;
+    font-size: 18px;
+    position: absolute;
+    top: 90px;
+    right: 9px;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+}
+
+.stamp-frame {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    background-color: #3e5131;
+    box-shadow: inset 0px 0px 0px 4px #af8a32;
+    border-radius: 4px;
+}
+
+.wrapper {
+    background-color: #567144;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+}
+
+.wrapper h1 {
+    display: inline-flex;
+    line-height: 1;
+    padding: 6px;
+    left: 0;
+    top: 0;
+}
+
+.factory {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.entrance {
+    height: 64px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 25px);
+    width: 100%;
+}
+
+.entrance::after {
+    content: "";
+    left: -15px;
+    bottom: -2px;
+    position: absolute;
+    width: calc(100% + 30px);
+    height: 4px;
+}
+
+.wall {
+    box-shadow: inset 6px 6px 12px 6px rgba(0, 0, 0, 0.25);
+    width: 21%;
+    height: calc(100% - 28px);
+    position: absolute;
+    bottom: 0;
+    border-style: solid;
+    border-color: #232526;
+}
+
+.wall.is-left {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    border-width: 1px 0 0 1px;
+}
+
+.wall.is-right {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    right: 0;
+    border-width: 1px 1px 0 0;
+}
+
+.pillar {
+    box-shadow: inset 6px 6px 12px 6px rgba(0, 0, 0, 0.25);
+    width: 9%;
+    height: calc(100% - 7px);
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #232526;
+    border-bottom: 0;
+}
+
+.pillar.is-left {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    left: 21%;
+}
+
+.pillar.is-right {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    right: 21%;
+}
+
+.gate {
+    box-shadow: inset 1px 12px 9px -6px rgba(249, 243, 230, 0.95);
+    border-radius: 75% 75% 0% 0%/10% 10% 0% 0%;
+    width: 41%;
+    background: linear-gradient(to right, #232526, #414345);
+    height: calc(100% - 14px);
+    left: 29.5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+}
+
+.gate::after {
+    content: "Guinness";
+    font-weight: 200;
+    color: #fff;
+    font-size: 14px;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    opacity: 0.85;
+    width: 100%;
+}
+
+.gate::before {
+    content: "";
+    background: linear-gradient(to bottom, #B28B67 5.66%, #232526 94.35%);
+    bottom: 0;
+    left: -7px;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    height: 5px;
+    border-radius: 0 0 0 0/4px 4px 4px 4px;
+    transform: skewX(-3deg);
+    width: calc(100% + 14px);
+    border: 1px solid #232526;
+}
+
+.gate .gate-logo {
+    width: 12px;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+}
+
+.bg {
+    border: 1px solid #232526;
+    border-bottom: 0;
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    height: 96px;
+    position: absolute;
+    z-index: 1;
+    bottom: -3px;
+    left: 0;
+    transform: scale(0.93);
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+
+.bg.is-faint {
+    transform: scale(1);
+    bottom: -30px;
+}
+
+.bg .bg-roof {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 100%);
+    border: 1px solid #232526;
+    border-bottom: 0;
+    min-height: 6px;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    transform: scale(1);
+}
+
+.bg .bg-roof::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: #232526;
+}
+
+.bg .windows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row dense;
+    grid-column-gap: 24px;
+    grid-row-gap: 6px;
+    height: 100%;
+    padding: 6px 12px;
+    width: 50%;
+}
+
+.bg .windows .window {
+    box-shadow: inset 5px 0px 6px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex: 1;
+    border: 1px solid #232526;
+    position: relative;
+}
+
+.bg .windows .window::before,
+.bg .windows .window::after {
+    box-shadow: inset 2px 0px 3px 0px rgba(0, 0, 0, 0.25);
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    border: 1px solid #232526;
+}
+
+.bg .windows .window::before {
+    border-right: 0;
+    left: -8px;
+}
+
+.bg .windows .window::after {
+    border-left: 0;
+    right: -8px;
+}
+
+.bg .windows .window span {
+    position: absolute;
+    top: 10px;
+    height: 1px;
+    background-color: #232526;
+    width: 100%;
+}
+
+.main-building {
+    position: absolute;
+    z-index: 4;
+    height: 120px;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 25px);
+}
+
+.main-building .building {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    left: 30%;
+    border: 1px solid #232526;
+    position: absolute;
+    box-shadow: inset 6px 6px 12px 6px rgba(0, 0, 0, 0.15);
+    height: 80px;
+    width: 40%;
+    bottom: 0;
+    padding: 6px 9px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    z-index: 4;
+}
+
+.main-building .building::after {
+    content: "Guinness";
+    color: #232526;
+    font-size: 18px;
+    top: 9px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    opacity: 0.75;
+    width: 100%;
+}
+
+.main-building .building::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: #232526;
+    left: 0;
+}
+
+.main-building .building .chimney {
+    height: 50px;
+    top: -50px;
+    width: 15%;
+    left: 3px;
+}
+
+.main-building .building .chimney:nth-of-type(2) {
+    right: 3px;
+}
+
+.main-building .building .building-top-section {
+    position: absolute;
+    height: 60px;
+    top: -68px;
+    width: 30%;
+    left: 35%;
+    background: linear-gradient(to top, #fdfcfb 0%, #3E5131 100%);
+    border: 1px solid #232526;
+}
+
+.main-building .building .building-top-section::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    height: 1px;
+    background-color: #2f3233;
+    left: 0;
+}
+
+.main-building .building .building-top-section .vats {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 18px;
+    justify-content: center;
+    flex-flow: row nowrap;
+    grid-auto-flow: row dense;
+    position: absolute;
+    bottom: 10px;
+    height: calc(100% - 35px);
+}
+
+.main-building .building .building-top-section .vats .vat {
+    margin-top: auto;
+    height: 30px;
+}
+
+.main-building .building .pipe {
+    position: absolute;
+    height: 6px;
+    top: -45px;
+    width: 50%;
+    left: 23%;
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    border: 1px solid #232526;
+    border-radius: 4px;
+}
+
+.main-building .building .building-top-section-top {
+    background: linear-gradient(to bottom, #fdfcfb 0%, #3E5131 100%);
+    border: 1px solid #232526;
+    box-shadow: inset 6px 6px 12px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    height: 16px;
+    top: -83px;
+    width: 18%;
+    left: 41%;
+}
+
+.main-building .building .building-top-section-top::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    height: 1px;
+    background-color: #232526;
+    left: 0;
+}
+
+.main-building .building.is-middle {
+    left: 20%;
+    border: 1px solid #232526;
+    bottom: -6px;
+    height: 70px;
+    width: 60%;
+    z-index: 3;
+}
+
+.main-building .building.is-middle::after {
+    content: "";
+}
+
+.main-building .building.is-middle .chimney {
+    height: 28px;
+    width: 9%;
+    left: 6px;
+    top: -28px;
+}
+
+.main-building .building.is-middle .chimney:nth-of-type(2) {
+    left: initial;
+    right: 6px;
+}
+
+.main-building .building.is-back {
+    left: 6%;
+    border: 1px solid #232526;
+    z-index: 2;
+    height: 60px;
+    width: calc(100% - 12%);
+    bottom: -6px;
+}
+
+.main-building .building.is-back::after {
+    content: "";
+}
+
+.main-building .building.is-back .chimney {
+    height: 85px;
+    width: 9%;
+    left: 7px;
+    top: -85px;
+}
+
+.main-building .building.is-back .chimney:nth-of-type(2) {
+    left: initial;
+    right: 7px;
+}
+
+.main-building .chimney {
+    border-radius: 20% 20% 10% 10%/94% 95% 0% 0%;
+    position: absolute;
+    width: 9%;
+    border: 1px solid #232526;
+    background: linear-gradient(-20deg, #616161 0%, #3E5131 100%);
+}
+
+.main-building .chimney:nth-of-type(2) {
+    left: initial;
+    right: 7px;
+}
+
+.main-building .chimney::after {
+    content: "";
+    top: -2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 4px;
+    border-radius: 35% 35% 10% 10%/46% 45% 0% 0%;
+    box-shadow: 0 3px 5px rgba(62, 81, 49, 0.6);
+    background: #2f3233;
+    width: 8px;
+}
+
+.vats {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    flex-flow: row nowrap;
+    grid-auto-flow: row dense;
+    grid-column-gap: 4px;
+    height: calc(100% - 35px);
+}
+
+.vat {
+    background: linear-gradient(to left, #d7d2cc 0%, #304352 100%);
+    box-shadow: inset 6px 6px 12px 6px rgba(0, 0, 0, 0.25);
+    border: 1px solid #26311e;
+    border-radius: 4px;
+}
+
+.vat:nth-of-type(2) {
+    background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+.cloud {
+    position: absolute;
+    width: 70px;
+    height: 24px;
+    right: 6px;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    border-radius: 20px;
+    top: 20px;
+    transform: scale(0.5);
+    box-shadow: 0 3px 5px rgba(62, 81, 49, 0.6);
+}
+
+.cloud:first-of-type {
+    left: 30px;
+    right: unset;
+    top: 30px;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    right: 10px;
+    position: absolute;
+    border-radius: 40px;
+}
+
+.cloud::before {
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    right: 10px;
+    border-radius: 40px;
+}
+
+.cloud::after {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 10px;
+    border-radius: 20px;
+}
